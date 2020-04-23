@@ -1,10 +1,12 @@
 const path = require('path')
 const express = require('express')
+const cors = requre('cors')
 
 const server = express()
 
+server.use(cors())
 server.use(express.json())
-console.log(path.join(__dirname, 'public'));
+server.use(express.urlencoded({ extended: false }))
 server.use(express.static(path.resolve('public')))
 
 module.exports = server
