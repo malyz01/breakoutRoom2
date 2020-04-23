@@ -9,4 +9,6 @@ server.use(express.json())
 server.use(express.urlencoded({ extended: false }))
 server.use(express.static(path.resolve('public')))
 
+server.use('/api/v1/sessions', require('./routes/sessions'))
+
 module.exports = server
