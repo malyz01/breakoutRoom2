@@ -271,7 +271,7 @@ body.BR2{
 .sign-up-container,
 .sign-in-container {
     width: 30vw;
-    height: 100vh;
+    height: 90vh;
     background-color: rgba(255, 255, 255, 0.65);
     padding: 30px;
     float: right;
