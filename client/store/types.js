@@ -1,3 +1,5 @@
+// SET AUTH
+export const SET_AUTH = 'SET_AUTH'
 // SIGN IN/UP 
 export const TOGGLE_SIGN_PAGE = 'TOGGLE_SIGN_PAGE' //used
 export const SIGN_IN_USER = 'SIGN_IN_USER'

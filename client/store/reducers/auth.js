@@ -1,26 +1,18 @@
-import {TOGGLE_SIGN_PAGE} from '../types'
+import { SET_AUTH } from '../types'
 
-const initialState = {
-    open: false
+const INITIAL_STATE = {
+  isAuthenticated: false,
+  user: {}
 }
 
-const authentication = (state=initialState, actions) => {
-    switch(actions.type) {
-        case TOGGLE_SIGN_PAGE:
-            return {...state, open: !state.sign }
-            
-        default :
-            return state
-    }
+export default (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case SET_AUTH:
+      return {
+        isAuthenticated: !!Object.keys(action.payload)[0],
+        user: { ...action.payload }
+      }
+    default:
+      return state
+  }
 }
-
-
-
-export default authentication
-
-
-// {
-//     open: state.auth.open
-// }
-
-// connect(mSTP, mDTP)()

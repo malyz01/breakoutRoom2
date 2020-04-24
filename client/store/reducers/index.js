@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
 import auth from './auth'
 import toggleForm from './toggleForm'
-import profiles from './profiles'
+import profile from './profile'
 
-export default combineReducers ({
+export default combineReducers({
     auth,
+    profile,
     toggleForm
 })

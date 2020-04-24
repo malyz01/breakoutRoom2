@@ -23,12 +23,12 @@ router.get('/:userId', async (req, res) => {
 })
 
 // POST - /api/v1/sessions/:userId/new
-router.post('/api/v1/sessions/:userId/new', (req, res) => {
-  try {
-    const 
-  } catch (err) {
-
-  }
-})
+// router.post('/api/v1/sessions/:userId/new', (req, res) => {
+//   try {
+//     const 
+//   } catch (err) {
+    
+//   }
+// })
 
 module.exports = router

@@ -277,6 +277,11 @@ body.BR2{
 
 .sign-up-buttons button {
     float: right;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
 }
 
 /* END SIGN UP FORM STYLES */

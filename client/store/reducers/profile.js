@@ -10,6 +10,8 @@ const profile = ( state=initialState, action ) => {
             return {
                 user: state.user.filter((profile) => profile !== action.user)
             }
+            default:
+                return state
     }
 }
 
