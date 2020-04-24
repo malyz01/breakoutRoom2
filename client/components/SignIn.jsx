@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class SignIn extends React.Component {
   state = {
@@ -18,7 +19,7 @@ class SignIn extends React.Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div className='sign-in-container'>
         <div className='sign-in-text'>
@@ -30,9 +31,11 @@ class SignIn extends React.Component {
           <input onChange={this.updatePassword} name='password' placeholder='Password' /><br />
         </div>
         <div className='sign-in-buttons'>
-          <button>
-            Cancel
-          </button>
+          <Link to='/'>
+            <button>
+              Cancel
+            </button>
+          </Link>
           <button
             onClick={this.updateAll} // updates the database (adds info to database)
           >

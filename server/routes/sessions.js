@@ -1,9 +1,10 @@
 const router = require('express').Router()
+const Sessions = require('../db/functions/session')
 
 // GET - /api/v1/sessions
 router.get('/', async (req, res) => {
   try {
-    const sessions = await Session.fetchSessions()
+    const sessions = await Sessions.fetchSessions()
     res.status(200).json(sessions)
   } catch (err) {
     console.log(err)
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
 // GET - /api/v1/sessions/:userId
 router.get('/:userId', async (req, res) => {
   try {
-    const userSessions = await Session.fetchUserSession(req.params.userId)
+    const userSessions = await Sessions.fetchUserSession(req.params.userId)
     res.status(200).json(userSessions)
   } catch (err) {
     console.log(err)

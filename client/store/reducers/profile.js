@@ -1,4 +1,4 @@
-import { DELETE_PROFILE, UPDATE_PROFILE, FETCH_PROFILE } from '../types'
+import { DELETE_PROFILE, UPDATE_PROFILE, FETCH_PROFILES } from '../types'
 
 const initialState = {
   profiles: null, //array of objects
@@ -7,7 +7,7 @@ const initialState = {
 
 const profile = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_PROFILE:
+    case FETCH_PROFILES:
       return { ...state }
     case UPDATE_PROFILE:
       return { ...state, userProfile: { ...action.data } }
