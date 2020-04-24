@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import App from './components/App'
 import { HashRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
-// import reducers from './reducers/index'
+import reducers from './store/reducers/index'
 import { createStore } from 'redux'
 
 const store = createStore(
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <App />
       </Router>
     </Provider>,
-
     document.getElementById('app')
   )
 })

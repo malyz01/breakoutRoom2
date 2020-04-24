@@ -1,4 +1,5 @@
 const conn = require('../connection')
+
 const bcrypt = require('bcrypt')
 
 const authenticate = async (data, db = conn) => {
