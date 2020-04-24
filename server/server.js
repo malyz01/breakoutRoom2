@@ -11,5 +11,6 @@ server.use(express.static(path.resolve('public')))
 
 server.use('/api/v1/sessions', require('./routes/sessions'))
 server.use('/api/v1/auth', require('./routes/auth'))
+server.use('/api/v1/profile', require('./routes/profile'))
 
 module.exports = server

@@ -5,16 +5,7 @@ const fetchSessions = (db = conn) => {
 }
 
 const fetchUserSession = (userId, db = conn) => {
-  return db('sessions')
-    .join('users', 'users.id', 'sessions.user_id')
-    .select(
-      'users.id',
-      'users.username',
-      'sessions.duration',
-      'sessions.experience',
-      'sessions.rating',
-      'sessions.focus'
-    )
+  return db('sessions').where('user_id', userId).select()
 }
 
 module.exports = {

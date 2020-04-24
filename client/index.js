@@ -12,6 +12,15 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
+if (localStorage.jwtToken) {
+  setAuthorizationToken(localStorage.jwtToken) //token used to validate user through header request
+  try {
+    store.dispatch(setAuth(jwtDecode(localStorage.jwtToken)))
+  } catch (err) {
+    store.dispatch(setAuth({}))
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Provider store={store}>
