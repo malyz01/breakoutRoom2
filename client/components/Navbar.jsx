@@ -6,7 +6,9 @@ class Navbar extends Component {
   render () {
     return (<div className="responsive-nav">
       <div className="navbar-brand">
-            BR2
+        <Link to='/'>
+              BR2
+        </Link>
       </div>
       <div className="navbar-left-menu">
         <Link to='/'>
