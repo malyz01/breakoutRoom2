@@ -73,12 +73,12 @@ class SignUp extends React.Component {
         </div>
         <div className='sign-up-buttons'>
           <button>
-          Sign up
+          Cancel
           </button>
           <button
             onClick={this.updateAll} // updates the database (adds info to database)
           >
-          Cancel
+          Sign up
           </button>
         </div>
       </div>
