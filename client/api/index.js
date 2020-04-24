@@ -1,4 +1,17 @@
-import request from 'superagent'
+import axios from 'axios'
 
-export const = ''
+const api = axios.create({
+  baseURL: '/api'
+})
+
+export function setTokenHeader(token) {
+  if (token) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+  } else {
+    delete api.defaults.headers.common['Authorization']
+  }
+}
+
+export default api
+
 

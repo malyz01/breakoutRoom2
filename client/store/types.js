@@ -1,2 +1,12 @@
-export const NAME_HERE = "NAME_HERE" 
-// change the NAME_HERE TO THE APPROPRIATE NAME :)
+// SIGN IN/UP 
+export const TOGGLE_SIGN_PAGE = 'TOGGLE_SIGN_PAGE' //used
+export const SIGN_IN_USER = 'SIGN_IN_USER'
+//PROFILES
+export const REGISTER_USER = 'REGISTER_USER'
+export const UPDATE_PROFILE = 'UPDATE_PROFILE'
+export const DELETE_PROFILE = 'DELETE_PROFILE'
+// MED LOG ACTIONS
+export const GET_MED_LOGS = 'GET_MED_LOGS'
+export const GET_MED_LOG = 'GET_MED_LOG'
+export const UPDATE_MED_LOGS = 'UPDATE_MED_LOGS'
+export const UPDATE_MED_LOG = 'UPDATE_MED_LOG'
