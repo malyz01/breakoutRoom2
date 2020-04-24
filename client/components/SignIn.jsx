@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { connect } from 'react-redux'
 class SignIn extends React.Component {
   state = {
     username: '',
@@ -47,4 +47,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn
+export default connect()(SignIn)
