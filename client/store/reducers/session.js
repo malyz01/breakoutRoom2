@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-  switch (key) {
+  switch (action.type) {
     case FETCH_USER_SESSIONS:
       return { ...state, user: action.payload }
     case FETCH_SESSIONS:

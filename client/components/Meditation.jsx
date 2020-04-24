@@ -8,7 +8,7 @@ class Meditation extends React.Component {
     super(props)
     this.state = {
       displayTimer: false,
-      timerValue: 1000
+      timerValue: 22000
     }
   }
   componentDidMount () {
@@ -37,7 +37,7 @@ class Meditation extends React.Component {
       if (this.state.timerValue <= 0) {
         clearInterval(this.timer)
         this.playSound()
-        this.setState({ timerValue: 1000 })
+        this.setState({ timerValue: 22000 , displayTimer: false})
       }
     }, 100)
   }
