@@ -19,7 +19,7 @@ class SignIn extends React.Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div className='sign-in-container'>
         <div className='sign-in-text'>

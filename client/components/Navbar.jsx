@@ -2,30 +2,30 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 class Navbar extends Component {
-  render () {
+  render() {
     return (<div className="responsive-nav">
       <div className="navbar-brand">
         <Link to='/'>
-              BR2
+          BR2
         </Link>
       </div>
       <div className="navbar-left-menu">
         <Link to='/'>
-                HOME
+          HOME
         </Link>
         <Link to='/home'>
-                PROFILE
+          PROFILE
         </Link>
       </div>
       <div className="navbar-right-menu">
         <Link to='/sign-in'>
           <button className="sign-in-button">
-                SIGN IN
+            SIGN IN
           </button>
         </Link>
         <Link to='/sign-up'>
           <button className="sign-up-button">
-                SIGN UP
+            SIGN UP
           </button>
         </Link>
       </div>

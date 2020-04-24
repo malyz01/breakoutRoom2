@@ -4,14 +4,14 @@ import React from 'react'
 // import wavFile from '../../audio/singingBowl.wav'
 // const audio = new UIfx(wavFile)
 class Meditation extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       displayTimer: false,
       timerValue: 22000
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     let start = document.getElementById('start')
     start.addEventListener('click', function () {
       playSound()
@@ -50,25 +50,25 @@ class Meditation extends React.Component {
     // get remaining milliseconds
     let remainingMs = milliseconds - minutes * 60 * 1000 - remainingSeconds * 1000
 
-    if(remainingMs === 0){
+    if (remainingMs === 0) {
       remainingMs = '00'
     }
-    else{
-      remainingMs = remainingMs/10
+    else {
+      remainingMs = remainingMs / 10
     }
-    if(minutes < 10){
+    if (minutes < 10) {
       minutes = `0${minutes}`
     }
     return `${minutes}:${remainingSeconds}:${remainingMs}`
   }
-  render () {
+  render() {
     const { timerValue } = this.state
     return (
       <div className='meditate-container'>
         {!this.state.displayTimer && <div className='meditate'>
           <h2>Take some deep breaths...</h2>
           <p>Whenever you're ready to begin, click start.</p>
-          <button id='start' onClick = {this.startMeditation} >Start</button>
+          <button id='start' onClick={this.startMeditation} >Start</button>
         </div>}
         {this.state.displayTimer &&
 

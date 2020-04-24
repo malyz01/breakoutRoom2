@@ -6,6 +6,7 @@ router.delete('/delete/:id', (req, res) => {
   const id = req.params.id
   Profile.deleteById(id)
     .then((dbRes) => {
+      console.log(dbRes)
       res.sendStatus(200)
     })
     .catch((err) => {
