@@ -20,14 +20,14 @@ body.BR2{
     width: 100vw;
 }
 
-a.special-btn span {
+.special-btn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
- a.special-btn span:after {
+ .special-btn span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -36,11 +36,11 @@ a.special-btn span {
     transition: 0.5s;
   }
   
- a.special-btn:hover span {
+ .special-btn:hover span {
     padding-right: 25px;
   }
   
- a.special-btn:hover span:after {
+ .special-btn:hover span:after {
     opacity: 1;
     right: 0;
   }
@@ -51,6 +51,7 @@ a.special-btn span {
     position:sticky;
     top:0px;
     z-index:1;
+    transition:500ms;
 }
 
 .navbar-brand {
@@ -174,6 +175,8 @@ a.special-btn span {
 }
 .med-home.profile-area{
     background:rgba(255, 255, 255, 0.726);
+    width:60%;
+    margin: 0 auto 0 auto;
 }
 .med-home.profile-area .profile-pic{
     height:100px;
@@ -200,6 +203,9 @@ a.special-btn span {
     padding:50px;
     background:white;
     display:block;
+}
+.med-log-item-span div{
+    display:flex;
 }
 /* END HOME MED STYLES */
 
@@ -245,3 +251,32 @@ a.special-btn span {
     outline: none;
 }
 /* END MEDITATE STYLES */
+
+/* START SIGN UP FORM STYLES */
+.sign-up-container {
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 30px;
+}
+
+.sign-up-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sign-up-text hr {
+    width: 85%;
+    background-color: black;
+    height: 1px;
+    border-width: 0;
+}
+
+.sign-up-form input {
+    margin: 10px;
+}
+
+.sign-up-buttons button {
+    float: right;
+}
+
+/* END SIGN UP FORM STYLES */
