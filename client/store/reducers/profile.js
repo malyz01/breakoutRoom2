@@ -1,16 +1,24 @@
-import { DELETE_PROFILE, UPDATE_PROFILE } from '../types'
+import { DELETE_PROFILE, UPDATE_PROFILE, FETCH_PROFILE } from '../types'
 
 const initialState = {
-    userId: ''
+  profiles: null, //array of objects
+  userProfile: null //object
 }
 
-const profile = ( state=initialState, action ) => {
-    switch(action.type) {
-        case DELETE_PROFILE:
-            return {
-                userId: state.userId.filter((profile) => profile !== action.userId)
-            }
-    }
+const profile = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_PROFILE:
+      return { ...state }
+    case UPDATE_PROFILE:
+      return { ...state, userProfile: { ...action.data } }
+    case DELETE_PROFILE:
+      return {
+        ...state,
+        profiles: state.profiles.filter((p) => p.id === action.userId)
+      }
+    default:
+      return state
+  }
 }
 
 export default profile

@@ -1,13 +1,17 @@
-// import {GET_MED_LOGS, GET_MED_LOG, UPDATE_MED_LOGS, UPDATE_MED_LOG} from '../types'
+import { FETCH_USER_SESSIONS, FETCH_SESSIONS } from '../types'
 
-// const initialState = {
+const initialState = {
+  user: null,
+  sessions: null
+}
 
-// }
-
-// export default session = (state = initialState, action){
-//     switch(action.type) {
-//         case GET_MED_LOG:
-//             return {...state, action.userId}
-//     }
-// }
-
+export default (state = initialState, action) => {
+  switch (key) {
+    case FETCH_USER_SESSIONS:
+      return { ...state, user: action.payload }
+    case FETCH_SESSIONS:
+      return { ...state, sessions: action.payload }
+    default:
+      return state
+  }
+}
