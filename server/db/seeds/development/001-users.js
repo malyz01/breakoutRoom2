@@ -7,12 +7,14 @@ exports.seed = (knex) =>
         {
           id: 1,
           username: 'test1',
-          password: '1234'
+          password:
+            '$2b$10$rd5AxTo6o70d.0EIQ1QLCeKY5X/qCDzIjUKTqg1nKbamxmF8PFcfC'
         },
         {
           id: 2,
           username: 'test2',
-          password: '123'
+          password:
+            '$2b$10$rd5AxTo6o70d.0EIQ1QLCeKY5X/qCDzIjUKTqg1nKbamxmF8PFcfC'
         }
       ])
     )
