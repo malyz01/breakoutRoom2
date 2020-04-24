@@ -37,7 +37,7 @@ class Meditation extends React.Component {
       if (this.state.timerValue <= 0) {
         clearInterval(this.timer)
         this.playSound()
-        this.setState({ timerValue: 22000 })
+        this.setState({ timerValue: 22000 , displayTimer: false})
       }
     }, 100)
   }

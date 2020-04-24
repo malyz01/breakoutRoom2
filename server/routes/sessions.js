@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const Sessions = require('../db/functions/session')
+const Sessions = require('../db/functions/sessions')
 
 // GET - /api/v1/sessions
 router.get('/', async (req, res) => {
