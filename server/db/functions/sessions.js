@@ -16,3 +16,8 @@ const fetchUserSession = (userId, db = conn) => {
       'sessions.focus'
     )
 }
+
+module.exports = {
+  fetchSessions,
+  fetchUserSession
+}
