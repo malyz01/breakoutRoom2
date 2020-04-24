@@ -14,3 +14,16 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos
 }
+
+console.log(document.getElementsByClassName('responsive-nav')[0])
+let start = document.getElementById('start')
+console.log(document.getElementById('start'))
+start.addEventListener('onclick', function () {
+  playSound()
+})
+
+function playSound () {
+  let audio = new Audio()
+  audio.src = '/audio/singingBowl.wav'
+  audio.play()
+}
