@@ -1,0 +1,247 @@
+.body-overlay{
+    background:rgba(255, 255, 255, 0.199);
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:-1;
+}
+
+
+/* general styles */
+body.BR2{
+    background:url(images/home.jpeg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin:0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+a.special-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+ a.special-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+ a.special-btn:hover span {
+    padding-right: 25px;
+  }
+  
+ a.special-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+/* navbar styles */
+.responsive-nav{
+    display: flex;
+    background:rgb(255, 255, 255);
+    position:sticky;
+    top:0px;
+    z-index:1;
+}
+
+.navbar-brand {
+   margin: 20px 100px 20px 5%;
+   font-weight:800;
+   letter-spacing: 3px;
+   font-size:1.5rem;
+}
+
+.navbar-left-menu{
+    display: flex;
+}
+.navbar-left-menu a{
+    flex-grow:1;
+    padding:20px;
+    color:darkslategray;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+.navbar-left-menu a:last-child {
+    border-right: none;
+}
+.navbar-left-menu a:hover{
+    text-decoration: none;
+    color: darkslategray;
+    background:rgb(241, 241, 241);
+}
+.navbar-right-menu{
+    margin-left:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:5%;
+}
+
+.navbar-right-menu button {
+    border: 1px solid lightgrey;
+    padding: 10px;
+    width: 100px;
+    background-color: white;
+    margin-left: 10px;
+    color: darkslategray;
+}
+
+.navbar-right-menu button:hover {
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.navbar-right-menu button:focus {
+    outline: none;
+}
+/* END NAVBAR STYLES */
+
+/* START WELCOME STYLES */
+.home-container {
+    min-height: 80vh;
+    justify-content: center;
+    align-items:center;
+    display:flex;
+}
+
+.welcome {
+    background-color: rgba(255, 255, 255, 0.65);
+    width: 35vw;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.welcome a {
+    color: rgb(0, 0, 0);
+}
+
+.welcome a:hover {
+    color: inherit;
+}
+
+.welcome button {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.welcome button:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+}
+
+.welcome button:focus {
+    outline: none;
+}
+/* END WELCOME STYLES */
+
+/* START HOME MED STYLES */
+.med-home{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.med-home.start-area{
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.med-home.start-area a{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border:rgb(59, 59, 59);
+    color: rgb(59, 59, 59);;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    padding:20px;
+}
+.med-home.profile-area{
+    background:rgba(255, 255, 255, 0.726);
+}
+.med-home.profile-area .profile-pic{
+    height:100px;
+    width:100px;
+    border-radius:50%;
+}
+.inner{
+    width:60%;
+    margin:0 auto 0 auto;
+}
+.med-home.med-logs{
+    width:60%;
+    margin:0 auto 0 auto;
+}
+.med-home.med-logs h1{
+    color:white;
+    background:rgba(0, 0, 0, 0.418);
+    padding:20px;
+    margin: 0;
+    padding-left:50px;
+}
+.med-log-item{
+    width:100%;
+    padding:50px;
+    background:white;
+    display:block;
+}
+/* END HOME MED STYLES */
+
+/* START MEDITATE STYLES */
+.meditate-container {
+    min-height: 80vh;
+    justify-content: center;
+    align-items:center;
+    display:flex;
+}
+
+.meditate {
+    background-color: rgba(255, 255, 255, 0.65);
+    width: 35vw;
+    height: 30vh;
+    padding: 25px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+}
+
+.meditate h2 {
+    margin-bottom: 20px;
+}
+
+.meditate button {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+}
+
+.meditate button:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+}
+
+.meditate button:focus {
+    outline: none;
+}
+/* END MEDITATE STYLES */
