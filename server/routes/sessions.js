@@ -11,4 +11,24 @@ router.get('/', async (req, res) => {
   }
 })
 
+
+// GET - /api/v1/sessions/:userId
+router.get('/:userId', async (req, res) => {
+  try {
+    const userSessions = await Session.fetchUserSession(req.params.userId)
+    res.status(200).json(userSessions)
+  } catch (err) {
+    console.log(err)
+  }
+})
+
+// POST - /api/v1/sessions/:userId/new
+router.post('/api/v1/sessions/:userId/new', (req, res) => {
+  try {
+    const 
+  } catch (err) {
+
+  }
+})
+
 module.exports = router
