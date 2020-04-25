@@ -1,46 +1,44 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { toggleForm } from '../store/actions/toggleForm'
+
 class Navbar extends Component {
+  handleLink = (path) => () => {
+    this.props.history.push(path)
+  }
+
+  handleSign = (form) => () => {
+    this.props.toggleForm(form, true)
+  }
+
   render() {
-    return (<div className="responsive-nav">
-      <div className="navbar-brand">
-        <Link to='/'>
+    return (
+      <div className="responsive-nav">
+        <div onClick={this.handleLink('/')} className="navbar-brand pointer">
           BR2
-        </Link>
-      </div>
-      <div className="navbar-left-menu">
-        <Link to='/'>
-          HOME
-        </Link>
-        <Link to='/home'>
-          PROFILE
-        </Link>
-      </div>
-      <div className="navbar-right-menu">
-        <Link to='/sign-in'>
-          <button className="sign-in-button">
+        </div>
+        <div className="navbar-left-menu pointer">
+          <Link to="/">HOME</Link>
+          <Link to="/session">PROFILE</Link>
+        </div>
+        <div className="navbar-right-menu pointer">
+          <button
+            onClick={this.handleSign('signin')}
+            className="sign-in-button pointer"
+          >
             SIGN IN
           </button>
-        </Link>
-        <Link to='/sign-up'>
-          <button className="sign-up-button">
+          <button
+            onClick={this.handleSign('signup')}
+            className="sign-up-button pointer"
+          >
             SIGN UP
           </button>
-        </Link>
+        </div>
       </div>
-    </div>)
+    )
   }
 }
 
-// function mapStateToProps (state) {
-//     return {
-//         username: state.user.username
-//     }
-// }
-// const mapDispatchToProps = {
-//     signUpPageToggle,
-//     signInPageToggle
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
-export default Navbar
+export default connect(null, { toggleForm })(Navbar)
