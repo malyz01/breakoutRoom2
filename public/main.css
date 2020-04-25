@@ -1,350 +1,354 @@
-.body-overlay{
-    background:rgba(255, 255, 255, 0.199);
-    width:100vw;
-    height:100vh;
-    position:fixed;
-    top:0px;
-    left:0px;
-    z-index:-1;
+.body-overlay {
+  background: rgba(255, 255, 255, 0.199);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
 /* general styles */
-body.BR2{
-    background:url(images/home.jpeg);
-    background-size:cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin:0px;
-    height: 100vh;
-    width: 100vw;
+body.BR2 {
+  background: url(images/home.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .special-btn span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
- .special-btn span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
- .special-btn:hover span {
-    padding-right: 25px;
-  }
-  
- .special-btn:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.special-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.special-btn:hover span {
+  padding-right: 25px;
+}
+
+.special-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 /* navbar styles */
-.responsive-nav{
-    display: flex;
-    background:rgb(255, 255, 255);
-    position:sticky;
-    top:0px;
-    z-index:1;
-    transition:500ms;
+.responsive-nav {
+  display: flex;
+  background: rgb(255, 255, 255);
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  transition: 500ms;
 }
 
 .navbar-brand {
-   margin: 20px 60px 20px 5%;
-   font-weight:800;
-   letter-spacing: 3px;
-   font-size:1.5rem;
+  margin: 20px 60px 20px 5%;
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
 }
 
 .navbar-brand a,
 .navbar-brand a:hover {
-    color: inherit;
+  color: inherit;
 }
 
-.navbar-left-menu{
-    display: flex;
+.navbar-left-menu {
+  display: flex;
 }
-.navbar-left-menu a{
-    flex-grow:1;
-    padding:20px;
-    color:darkslategray;
-    border-right: 1px solid rgb(211, 211, 211);
+.navbar-left-menu a {
+  flex-grow: 1;
+  padding: 20px;
+  color: darkslategray;
+  border-right: 1px solid rgb(211, 211, 211);
 }
 .navbar-left-menu a:last-child {
-    border-right: none;
+  border-right: none;
 }
-.navbar-left-menu a:hover{
-    text-decoration: none;
-    color: darkslategray;
-    background:rgb(241, 241, 241);
+.navbar-left-menu a:hover {
+  text-decoration: none;
+  color: darkslategray;
+  background: rgb(241, 241, 241);
 }
-.navbar-right-menu{
-    margin-left:auto;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin-right:5%;
+.navbar-right-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5%;
 }
 
 .navbar-right-menu button {
-    border: 1px solid lightgrey;
-    padding: 10px;
-    width: 100px;
-    background-color: white;
-    margin-left: 10px;
-    color: darkslategray;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  width: 100px;
+  background-color: white;
+  margin-left: 10px;
+  color: darkslategray;
 }
 
 .navbar-right-menu button:hover {
-    background-color: rgb(241, 241, 241);
-    cursor: pointer;
+  background-color: rgb(241, 241, 241);
+  cursor: pointer;
 }
 
 .navbar-right-menu button:focus {
-    outline: none;
+  outline: none;
 }
 /* END NAVBAR STYLES */
 
 /* START WELCOME STYLES */
 .home-container {
-    min-height: 80vh;
-    justify-content: center;
-    align-items:center;
-    display:flex;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .welcome {
-    background-color: rgba(255, 255, 255, 0.65);
-    width: 40vw;
-    padding: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 40vw;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 .welcome a {
-    color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .welcome a:hover {
-    color: inherit;
+  color: inherit;
 }
 
-.welcome p, .welcome button {
-    font-size: 17px;
+.welcome p,
+.welcome button {
+  font-size: 17px;
 }
 
 .welcome button {
-    border: 1px solid grey;
-    border-radius: 3px;
-    padding: 10px;
-    width: 100px;
-    background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .welcome button:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
 }
 
 .welcome button:focus {
-    outline: none;
+  outline: none;
 }
 /* END WELCOME STYLES */
 
 /* START HOME MED STYLES */
-.med-home{
-    padding-top:100px;
-    padding-bottom:100px;
+.med-home {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-.med-home.start-area{
-    height:50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.med-home.start-area {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.med-home.start-area a{
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border:rgb(59, 59, 59);
-    color: rgb(59, 59, 59);;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    padding:20px;
+.med-home.start-area a {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: rgb(59, 59, 59);
+  color: rgb(59, 59, 59);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  padding: 20px;
 }
-.med-home.profile-area{
-    background:rgba(255, 255, 255, 0.726);
-    width:60%;
-    margin: 0 auto 0 auto;
+.med-home.profile-area {
+  background: rgba(255, 255, 255, 0.726);
+  width: 60%;
+  margin: 0 auto 0 auto;
 }
-.med-home.profile-area .profile-pic{
-    height:100px;
-    width:100px;
-    border-radius:50%;
+.med-home.profile-area .profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
-.inner{
-    width:60%;
-    margin:0 auto 0 auto;
+.inner {
+  width: 60%;
+  margin: 0 auto 0 auto;
 }
-.med-home.med-logs{
-    width:60%;
-    margin:0 auto 0 auto;
+.med-home.med-logs {
+  width: 60%;
+  margin: 0 auto 0 auto;
 }
-.med-home.med-logs h1{
-    color:white;
-    background:rgba(0, 0, 0, 0.418);
-    padding:20px;
-    margin: 0;
-    padding-left:50px;
+.med-home.med-logs h1 {
+  color: white;
+  background: rgba(0, 0, 0, 0.418);
+  padding: 20px;
+  margin: 0;
+  padding-left: 50px;
 }
-.med-log-item{
-    width:100%;
-    padding:50px;
-    background:white;
-    display:block;
+.med-log-item {
+  width: 100%;
+  padding: 50px;
+  background: white;
+  display: block;
 }
-.med-log-item-span div{
-    display:flex;
+.med-log-item-span div {
+  display: flex;
 }
 /* END HOME MED STYLES */
 
 /* START MEDITATE STYLES */
 .meditate-container {
-    min-height: 80vh;
-    justify-content: center;
-    align-items:center;
-    display:flex;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .meditate {
-    background-color: rgba(255, 255, 255, 0.65);
-    width: 35vw;
-    height: 30vh;
-    padding: 25px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    justify-content: center;
-    align-items:center;
-    display:flex;
-    flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 35vw;
+  height: 30vh;
+  padding: 25px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .meditate h2 {
-    margin-bottom: 30px;
-    font-size: 25px;
+  margin-bottom: 30px;
+  font-size: 25px;
 }
 
 .meditate p {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .meditate button {
-    border: 1px solid grey;
-    border-radius: 3px;
-    padding: 10px;
-    width: 100px;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin-top: 20px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
 }
 
 .meditate button:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
 }
 
 .meditate button:focus {
-    outline: none;
+  outline: none;
 }
 /* END MEDITATE STYLES */
 
 /* START SIGN UP/SIGN IN STYLES */
 .sign-up-container,
 .sign-in-container {
-    width: 30vw;
-    height: 90vh;
-    background-color: rgba(255, 255, 255, 0.65);
-    padding: 30px;
-    float: right;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 30px;
+  float: right;
 }
 
 .sign-up-text,
 .sign-in-text {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .sign-up-text hr,
 .sign-in-text hr {
-    width: 85%;
-    background-color: black;
-    height: 1px;
-    border-width: 0;
+  width: 85%;
+  background-color: black;
+  height: 1px;
+  border-width: 0;
 }
 
 .sign-up-form input,
 .sign-in-form input {
-    margin: 10px;
-    background-color: white;
-    padding: 5px 10px;
-    color: black;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    height: 5vh;
-    width: 90%;
+  margin: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  height: 5vh;
+  width: 90%;
 }
 
 .sign-up-form input:focus,
 .sign-in-form input:focus {
-    outline: none;
-    background-color: whitesmoke;
+  outline: none;
+  background-color: whitesmoke;
 }
 
 .sign-up-buttons,
 .sign-in-buttons {
-    text-align: center;
+  text-align: center;
 }
 
 .sign-up-buttons button,
 .sign-in-buttons button {
-    border: 1px solid grey;
-    border-radius: 3px;
-    padding: 10px;
-    width: 100px;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: 20px 5px 0px 5px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 20px 5px 0px 5px;
 }
 
 .sign-up-buttons button:hover,
 .sign-in-buttons button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    cursor: pointer;
-
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
 
 /* END SIGN UP/SIGN IN STYLES */
 
 /* START TIMER STYLES */
 .timer {
-    background-color: rgba(255, 255, 255, 0.65);
-    width: 35vw;
-    height: 30vh;
-    padding: 25px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    justify-content: center;
-    align-items:center;
-    display:flex;
-    flex-direction: column;
-    font-size: 80px;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 35vw;
+  height: 30vh;
+  padding: 25px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 80px;
 }
 /* END TIMER STYLES */

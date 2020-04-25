@@ -1,15 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 
 import { fetchUserSessions } from '../store/actions/sessions'
 
 class Home extends React.Component {
-  componentDidMount() {
-    this.props.fetchUserSessions(4)
-  }
   state = {
     //
+  }
+
+  handleBegin = () => {
+    this.props.history.push('/meditate')
   }
 
   render() {
@@ -25,9 +25,7 @@ class Home extends React.Component {
             te eam, te albucius delicatissimi usu. Duo ne dicam invidunt. Sumo
             praesent dissentiunt sea ex, has ne postulant sententiae.
           </p>
-          <Link to="/meditate">
-            <button>Begin?</button>
-          </Link>
+          <button onClick={this.handleBegin}>Begin</button>
         </div>
       </div>
     )
