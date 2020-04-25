@@ -1,15 +1,7 @@
 const conn = require('../connection')
 
 const deleteById = (id, db = conn) => {
-  console.log('deleting by id')
-  console.log(id)
-  return db('users')
-    .where('id', id)
-    .del()
-    .catch((err) => {
-      console.log(err)
-      return 'data base Err'
-    })
+  return db('users').where('id', id).del()
 }
 
 const updateById = (data, id, db = conn) => {
