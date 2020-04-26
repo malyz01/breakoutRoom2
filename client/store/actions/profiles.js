@@ -1,17 +1,49 @@
 // PROFILE ACTIONS
 import api from '../../api'
-import { DELETE_PROFILE, FETCH_PROFILE } from '../types'
+import {
+  FETCH_PROFILES,
+  FETCH_USER_PROFILE,
+  UPDATE_PROFILE,
+  DELETE_PROFILE
+} from '../types'
 
-export const fetchProfile = (userId) => (dispatch) => {
+// GET - /api/v1/profiles
+export const fetchProfiles = () => (dipatch) => {
   api
-    .get(`/api/v1/profiles/${userId}`)
-    .then((profile) => {
+    .get('/profiles')
+    .then(({ data }) => {
       dispatch({
-        type: FETCH_PROFILE,
-        payload: profile.data
+        type: FETCH_PROFILES,
+        payload: data
       })
     })
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err.message))
+}
+
+// GET - /api/v1/profiles/:userId
+export const fetchUserProfile = (userId) => (dispatch) => {
+  api
+    .get(`/api/v1/profiles/${userId}`)
+    .then(({ data }) => {
+      dispatch({
+        type: FETCH_USER_PROFILE,
+        payload: data
+      })
+    })
+    .catch((err) => console.log(err.message))
+}
+
+// PUT - /api/v1/profiles/update/:userId
+export const updateProfile = (userId, updatedData) => (dispatch) => {
+  api
+    .put(`/api/v1/profiles/update/${userId}`, updatedData)
+    .then(({ data }) => {
+      dispatch({
+        type: UPDATE_PROFILE,
+        payload: data
+      })
+    })
+    .catch((err) => console.log(err.message))
 }
 
 export const deleteProfile = (userId) => (dispatch) => {
@@ -20,23 +52,10 @@ export const deleteProfile = (userId) => (dispatch) => {
     .then(() => {
       dispatch({
         type: DELETE_PROFILE,
-        userId
+        payload: userId
       }).catch((err) =>
         console.log('something went wrong when deleting your profile')
       )
-    })
-    .catch((err) => console.log(err))
-}
-
-// PUT /api/v1/profile/update/:id
-export const updateProfile = (userId, updatedData) => (dispatch) => {
-  api
-    .put(`/api/v1/profiles/update/${user}`)
-    .then((response) => {
-      dispatch({
-        type: UPDATE_PROFILE,
-        userData: response.data
-      })
     })
     .catch((err) => console.log(err))
 }
