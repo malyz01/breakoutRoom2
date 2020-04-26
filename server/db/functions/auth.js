@@ -1,5 +1,4 @@
 const conn = require('../connection')
-
 const bcrypt = require('bcrypt')
 
 const authenticate = async (data, db = conn) => {
@@ -7,8 +6,8 @@ const authenticate = async (data, db = conn) => {
     const user = await db('users').where('username', data.username).first()
     if (typeof user === 'undefined') return 'Username does not exists'
 
-    // const isMatch = await bcrypt.compare(data.password, user.password)
-    // if (!isMatch) return 'Password does not match'
+    const isMatch = await bcrypt.compare(data.password, user.password)
+    if (!isMatch) return 'Password does not match'
 
     return user
   } catch (err) {

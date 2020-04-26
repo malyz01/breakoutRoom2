@@ -20,10 +20,10 @@ export const fetchProfiles = () => (dipatch) => {
     .catch((err) => console.log(err.message))
 }
 
-// GET - /api/v1/profiles/:userId
+// GET - /api/v1/profiles/user/:userId
 export const fetchUserProfile = (userId) => (dispatch) => {
   api
-    .get(`/api/v1/profiles/${userId}`)
+    .get(`/profiles/user/${userId}`)
     .then(({ data }) => {
       dispatch({
         type: FETCH_USER_PROFILE,
@@ -34,9 +34,9 @@ export const fetchUserProfile = (userId) => (dispatch) => {
 }
 
 // PUT - /api/v1/profiles/update/:userId
-export const updateProfile = (userId, updatedData) => (dispatch) => {
+export const updateUserProfile = (userId, updatedData) => (dispatch) => {
   api
-    .put(`/api/v1/profiles/update/${userId}`, updatedData)
+    .put(`/profiles/update/${userId}`, updatedData)
     .then(({ data }) => {
       dispatch({
         type: UPDATE_PROFILE,
@@ -46,16 +46,15 @@ export const updateProfile = (userId, updatedData) => (dispatch) => {
     .catch((err) => console.log(err.message))
 }
 
-export const deleteProfile = (userId) => (dispatch) => {
+// DELETE - /api/v1/profiles/delete/:userId
+export const deleteUserProfile = (userId) => (dispatch) => {
   api
-    .delete(`/api/v1/profiles/delete/${userId}`)
+    .delete(`/profiles/delete/${userId}`)
     .then(() => {
       dispatch({
         type: DELETE_PROFILE,
         payload: userId
-      }).catch((err) =>
-        console.log('something went wrong when deleting your profile')
-      )
+      })
     })
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err.message))
 }
