@@ -1,11 +1,11 @@
-# BR2 - making meditation easy
+# BR2
 
-This was a group project for Enspiral Dev Academy bootcamp.
+A simple meditation app including a meditation timer with a singing bowl start & finish, meditation logs and much more to come. This was a group project for Enspiral Dev Academy bootcamp.
 
 To begin:
 
 ```sh
-npm i
+npm install
 ```
 
 ```sh
