@@ -1,15 +1,15 @@
 import { TOGGLE_SIGN_PAGE } from '../types'
 
 const inititalState = {
-    signup: false,
-    signin: false
+  open: false,
+  form: ''
 }
 
-export default (state=inititalState, action) => {
-    switch (action.type) {
-        case TOGGLE_SIGN_PAGE:
-        return {...state, [action.payload]: !state[action.payload]}
-        default:
-            return state
-    }
+export default (state = inititalState, action) => {
+  switch (action.type) {
+    case TOGGLE_SIGN_PAGE:
+      return { form: action.form, open: action.open }
+    default:
+      return state
+  }
 }
