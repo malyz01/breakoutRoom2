@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 
 import App from './components/App'
 import reducers from './store/reducers/index'
-import { setAuthorizationToken } from './store/actions/auth'
+import { setAuth, setAuthorizationToken } from './store/actions/auth'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
