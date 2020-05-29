@@ -1,8 +1,9 @@
 import { TOGGLE_SIGN_PAGE } from '../types'
 
-export const toggleForm = (form) => {
-    return {
-        type: TOGGLE_SIGN_PAGE,
-        payload: form //form is 
-    }
+export const toggleForm = (form, open) => {
+  return {
+    type: TOGGLE_SIGN_PAGE,
+    form,
+    open
+  }
 }

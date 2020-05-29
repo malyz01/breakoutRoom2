@@ -11,8 +11,8 @@ router.get('/', async (req, res) => {
   }
 })
 
-// GET - /api/v1/sessions/:userId
-router.get('/:userId', async (req, res) => {
+// GET - /api/v1/sessions/user/:userId
+router.get('/user/:userId', async (req, res) => {
   try {
     const userSessions = await Sessions.fetchUserSession(req.params.userId)
     res.status(200).json(userSessions)
