@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom'
 import { toggleForm } from '../store/actions/toggleForm'
 
 class Navbar extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      isAuthenticated: props.auth.isAuthenticated
+    }
+  }
+
   handleLink = (path) => () => {
     this.props.history.push(path)
   }
@@ -12,7 +20,7 @@ class Navbar extends Component {
     this.props.toggleForm(form, true)
   }
 
-  render() {
+  render () {
     return (
       <div className="responsive-nav">
         <div onClick={this.handleLink('/')} className="navbar-brand pointer">
@@ -20,7 +28,9 @@ class Navbar extends Component {
         </div>
         <div className="navbar-left-menu pointer">
           <Link to="/">HOME</Link>
-          <Link to="/session">PROFILE</Link>
+          {this.state.isAuthenticated &&
+            <Link to="/session">PROFILE</Link>
+          }
         </div>
         <div className="navbar-right-menu pointer">
           <button
@@ -41,4 +51,10 @@ class Navbar extends Component {
   }
 }
 
-export default connect(null, { toggleForm })(Navbar)
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  }
+}
+
+export default connect(mapStateToProps, { toggleForm })(Navbar)
