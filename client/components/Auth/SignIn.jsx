@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+
+import {authUser} from '../../store/actions/auth'
+
 class SignIn extends React.Component {
   state = {
     username: '',
@@ -11,6 +14,11 @@ class SignIn extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.authUser(this.state)
   }
 
   render() {
@@ -24,12 +32,14 @@ class SignIn extends React.Component {
           <input
             onChange={this.handleOnChange}
             name="username"
+            type="text"
             placeholder="Username"
           />
           <br />
           <input
             onChange={this.handleOnChange}
             name="password"
+            type="password"
             placeholder="Password"
           />
           <br />
@@ -39,7 +49,7 @@ class SignIn extends React.Component {
             <button>Cancel</button>
           </Link>
           <button
-            onClick={this.updateAll} // updates the database (adds info to database)
+            onClick={this.handleSubmit}
           >
             Sign In
           </button>
@@ -49,4 +59,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default connect()(SignIn)
+export default connect(null, {authUser})(SignIn)
