@@ -1,10 +1,10 @@
 # BR2
 
-# Contributors
+## Contributors
 
 ### Please fork this repo to your own git repo and make changes there.
 
-# Info
+## Info
 
 A simple meditation app including a meditation timer with a singing bowl start & finish, meditation logs and much more to come. This was a group project for Enspiral Dev Academy bootcamp.
 
